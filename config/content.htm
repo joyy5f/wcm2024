@@ -1,17 +1,15 @@
 <h1>About</h1>
 <p>40823124 wcm2024 倉儲網站</p>
-<p><img alt="" height="400" src="/images/Uond.gif" width="600"/></p>
-<p>網頁: 請填入目前網站所在的 URL, <a href="https://mde.tw/cmsimde_site">https://mde.tw/cmsimde_site</a></p>
-<p>網誌: 請填入目前網站所在的 URL/blog, <a href="https://mde.tw/cmsimde_site/blog">https://mde.tw/cmsimde_site/blog</a></p>
-<p>簡報: 請填入目前網站所在的 URL/reveal, <a href="https://mde.tw/cmsimde_site/reveal">https://mde.tw/cmsimde_site/reveal</a></p>
-<p>倉儲: 請填入目前網站所對應的 Github 倉儲連結</p>
+<p><a href="https://joyy5f.github.io/wcm2024/content/index.html" target="_blank"><img alt="" height="400" src="/images/Uond.gif" width="600"/></a> </p>
+<p><a href="https://github.com/joyy5f/wcm2024" target="_blank">倉儲<img alt="" height="80" src="/images/GitHub_Invertocat_Logo.svg.png" width="80"/></a> </p>
+<p><a href="https://joyy5f.github.io/wcm2024/content/index.html">網頁</a></p>
+<p><a href="https://joyy5f.github.io/wcm2024/blog/index.html">blog</a></p>
+<p><a href="https://joyy5f.github.io/wcm2024/reveal/index.html">簡報</a></p>
+<p></p>
 <p>本 cmsimde 網際內容管理系統的對應 Template 倉儲:</p>
 <p style="padding-left: 30px;"><a href="https://github.com/mdecycu/cmsimde_site">https://github.com/mdecycu/cmsimde_site</a></p>
 <p style="padding-left: 30px;">此 Template 將 cmsimde 作為子目錄而非子模組, 使用者可以依照需求自行修改</p>
-<p style="padding-left: 30px;">倉儲對應網站: <a href="https://mde.tw/cmsimde_site">https://mde.tw/cmsimde_site</a></p>
-<p><a href="https://github.com/joyy5f" target="_blank">Github<img alt="" height="80" src="/images/GitHub_Invertocat_Logo.svg.png" width="80"/></a> <a href="https://www.youtube.com/@user-ci7wq5qq2b" target="_blank">Youtube<img alt="" height="80" src="/images/Youtube.png" width="80"/></a></p>
-<p></p>
-<h1>Week updated</h1>
+<p style="padding-left: 30px;">倉儲對應網站: <a href="https://mde.tw/cmsimde_site">https://mde.tw/cmsimde_site</a></p><h1>Week updated</h1>
 <p>每周更新進度與課程內容</p>
 <h2>w1</h2>
 <h2>w2</h2>
@@ -47,6 +45,8 @@
 <p></p>
 <h2>w6</h2>
 <h3>git</h3>
+<p></p>
+<p></p>
 <p><strong>git的發展歷史</strong></p>
 <p>根據chatgpt的回答:</p>
 <p>Git 是由 Linus Torvalds 在 2005 年開始開發的分散式版本控制系統。以下是 Git 的主要發展歷史：</p>
@@ -94,7 +94,7 @@
 </ul>
 </li>
 </ol>
-<p><strong></strong></p>
+<p></p>
 <p><strong>git創辦人的相關履歷</strong></p>
 <p>根據chatgpt的回答:</p>
 <p>Linus Torvalds 是 Git 的創始人之一，他的履歷包含了以下重要的里程碑：</p>
@@ -175,6 +175,26 @@
 </li>
 </ol>
 <h3>在 Windows demo git client 與 git server</h3>
+<p>在 y:\tmp 建立 gitproject\repository 與 gitserver\repository </p>
+<p>在 y:\tmp\gitproject&gt; git config --global init.defaultBranch main</p>
+<p>進入 gitproject\repository 目錄, 新增一個目錄名稱為 repo1, 進入 repo1 執行 git init</p>
+<p>進入 gitserver\repository 目錄, 新增一個目錄名稱為 repo1, 進入 repo1 執行 git init --bare 建立裸倉儲</p>
+<p>在 y:\tmp\gitproject\repo1 目錄操作, 建立 README.md</p>
+<p><span>&gt;:</span>echo "Hello, World!" &gt; README.md</p>
+<p>&gt;:git add README.md</p>
+<p><span>&gt;:</span>git commit -m "Initial commit"</p>
+<p><span>&gt;:</span>git remote add origin y:\tmp\gitserver\repository\repo1</p>
+<p><span>&gt;:</span>git push -u origin main</p>
+<p><span>在 C:\tmp\repository&gt; git clone Y:\tmp\gitserver\repository\repo1</span></p>
+<p><span></span></p>
+<p></p><h3>chatgpt解釋git init --bare:</h3>
+<p>git init --bare 是一個 Git 命令，用於初始化一個裸存儲庫（bare repository）。裸存儲庫是一個不包含工作目錄的 Git 存儲庫，它僅包含版本控制所需的數據，例如提交歷史、分支、標籤等，而不包含實際的文件內容。</p>
+<p>裸存儲庫通常用於共享代碼的中央存儲庫（central repository），多個開發者可以從這個裸存儲庫克隆（clone）代碼到本地進行開發，然後將修改推送（push）回裸存儲庫，以便其他開發者可以同步這些修改。</p>
+<p>以下是 git init --bare 的一些關鍵特點和用法解釋：</p>
+<p>不包含工作目錄：</p>
+<p>裸存儲庫不像普通的 Git 存儲庫那樣包含工作目錄，因此無法在裸存儲庫中查看或編輯文件內容。<br/>這使得裸存儲庫更適合用作共享和同步代碼的中央存儲庫，而不是用於開發或編輯文件。<br/>適用於中央存儲庫：</p>
+<p>裸存儲庫通常用於作為中央存儲庫，多個開發者可以從中克隆代碼進行開發，然後將修改推送回中央存儲庫。<br/>這種模式有助於保持代碼的一致性、協作效率和版本控制。<br/>命令語法：</p>
+<p>git init --bare 命令中的 --bare 選項告訴 Git 初始化一個裸存儲庫，而不是普通的存儲庫。<br/>命令的完整形式為：git init --bare &lt;repository_path&gt;，其中 &lt;repository_path&gt; 是存儲庫的路徑。</p>
 <p></p><h1>cmsimde</h1>
 <p><span style="background-color: #ccffcc;">SMap</span> - SiteMap - 依照階次列出網站的所有頁面.</p>
 <p><span style="background-color: #ccffcc;">EditA</span> - Edit All page - 將所有頁面放入編輯模式中, 主要用來處理頁面搬遷, 刪除或決定衝突頁面內容版本.</p>
